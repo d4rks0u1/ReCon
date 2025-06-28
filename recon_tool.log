@@ -1,0 +1,123 @@
+2025-06-26 06:01:47,351 - utils.logger - INFO - Starting reconnaissance for target: 127.0.0.1
+2025-06-26 06:01:47,352 - utils.logger - INFO - Modules selected: all
+2025-06-26 06:01:47,352 - utils.logger - INFO - Report format: json
+2025-06-26 06:01:47,352 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-26 06:01:47,352 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-26 06:01:47,352 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:30:36,857 - utils.logger - INFO - Starting reconnaissance for target: google.com
+2025-06-29 02:30:36,861 - utils.logger - INFO - Modules selected: whois
+2025-06-29 02:30:36,861 - utils.logger - INFO - Report format: json
+2025-06-29 02:30:36,861 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:30:36,861 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:30:36,861 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:30:37,221 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:30:37,225 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:30:37,225 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:30:37,225 - utils.logger - INFO - Running module: WHOIS Lookup (T1591.002)
+2025-06-29 02:30:37,225 - utils.logger - INFO - Performing WHOIS lookup for target: google.com
+2025-06-29 02:30:41,489 - utils.logger - INFO - WHOIS lookup successful for google.com
+2025-06-29 02:30:41,489 - utils.logger - INFO - Module whois completed successfully.
+2025-06-29 02:30:41,489 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:30:41,493 - utils.logger - INFO - Overall JSON report saved to reports/google.com_overall_recon_report_20250629_023041.json
+2025-06-29 02:30:41,493 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:31:32,385 - utils.logger - INFO - Starting reconnaissance for target: google.com
+2025-06-29 02:31:32,389 - utils.logger - INFO - Modules selected: dns
+2025-06-29 02:31:32,389 - utils.logger - INFO - Report format: json
+2025-06-29 02:31:32,389 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:31:32,389 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:31:32,389 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:31:32,485 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:31:32,489 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:31:32,489 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:31:32,489 - utils.logger - INFO - Running module: DNS Information (T1590.002)
+2025-06-29 02:31:32,489 - utils.logger - INFO - Gathering DNS information for target: google.com
+2025-06-29 02:31:32,541 - utils.logger - INFO - Found 1 A records for google.com
+2025-06-29 02:31:32,601 - utils.logger - INFO - Found 1 AAAA records for google.com
+2025-06-29 02:31:32,669 - utils.logger - INFO - Found 1 MX records for google.com
+2025-06-29 02:31:32,793 - utils.logger - INFO - Found 4 NS records for google.com
+2025-06-29 02:31:38,233 - utils.logger - WARNING - DNS query for google.com (TXT) timed out.
+2025-06-29 02:31:38,253 - utils.logger - INFO - Found 1 SOA records for google.com
+2025-06-29 02:31:38,325 - utils.logger - INFO - Module dns completed successfully.
+2025-06-29 02:31:38,325 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:31:38,333 - utils.logger - INFO - Overall JSON report saved to reports/google.com_overall_recon_report_20250629_023138.json
+2025-06-29 02:31:38,333 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:31:54,125 - utils.logger - INFO - Starting reconnaissance for target: google.com
+2025-06-29 02:31:54,125 - utils.logger - INFO - Modules selected: subdomain
+2025-06-29 02:31:54,125 - utils.logger - INFO - Report format: json
+2025-06-29 02:31:54,129 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:31:54,129 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:31:54,129 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:31:54,221 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:31:54,221 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:31:54,221 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:31:54,225 - utils.logger - INFO - Running module: Subdomain Enumeration (T1590.002)
+2025-06-29 02:31:54,225 - utils.logger - INFO - Performing subdomain enumeration for target: google.com
+2025-06-29 02:31:54,245 - utils.logger - ERROR - subfinder not found. Please install it and ensure it's in your PATH.
+2025-06-29 02:31:54,245 - utils.logger - ERROR - Module subdomain completed with errors: subfinder not found. Please install it and ensure it's in your PATH.
+2025-06-29 02:31:54,245 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:31:54,269 - utils.logger - INFO - Overall JSON report saved to reports/google.com_overall_recon_report_20250629_023154.json
+2025-06-29 02:31:54,269 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:38:32,496 - utils.logger - INFO - Starting reconnaissance for target: google.com
+2025-06-29 02:38:32,497 - utils.logger - INFO - Modules selected: subdomain
+2025-06-29 02:38:32,497 - utils.logger - INFO - Report format: json
+2025-06-29 02:38:32,497 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:38:32,497 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:38:32,497 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:38:32,537 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:38:32,538 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:38:32,538 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:38:32,538 - utils.logger - INFO - Running module: Subdomain Enumeration (T1590.002)
+2025-06-29 02:38:32,538 - utils.logger - INFO - Performing subdomain enumeration for target: google.com
+2025-06-29 02:38:32,540 - utils.logger - ERROR - subfinder not found. Please install it and ensure it's in your PATH.
+2025-06-29 02:38:32,540 - utils.logger - ERROR - Module subdomain completed with errors: subfinder not found. Please install it and ensure it's in your PATH.
+2025-06-29 02:38:32,540 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:38:32,540 - utils.logger - INFO - Overall JSON report saved to reports/google.com_overall_recon_report_20250629_023832.json
+2025-06-29 02:38:32,540 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:39:26,486 - utils.logger - INFO - Starting reconnaissance for target: google.com
+2025-06-29 02:39:26,486 - utils.logger - INFO - Modules selected: subdomain
+2025-06-29 02:39:26,486 - utils.logger - INFO - Report format: json
+2025-06-29 02:39:26,486 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:39:26,486 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:39:26,486 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:39:26,505 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:39:26,505 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:39:26,505 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:39:26,505 - utils.logger - INFO - Running module: Subdomain Enumeration (T1590.002)
+2025-06-29 02:39:26,506 - utils.logger - INFO - Performing subdomain enumeration for target: google.com
+2025-06-29 02:39:37,567 - utils.logger - INFO - Subdomain enumeration successful for google.com. Found 768 subdomains.
+2025-06-29 02:39:37,568 - utils.logger - INFO - Module subdomain completed successfully.
+2025-06-29 02:39:37,568 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:39:37,568 - utils.logger - INFO - Overall JSON report saved to reports/google.com_overall_recon_report_20250629_023937.json
+2025-06-29 02:39:37,569 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:39:43,868 - utils.logger - INFO - Starting reconnaissance for target: 127.0.0.1
+2025-06-29 02:39:43,868 - utils.logger - INFO - Modules selected: nmap
+2025-06-29 02:39:43,868 - utils.logger - INFO - Report format: json
+2025-06-29 02:39:43,868 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:39:43,868 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:39:43,868 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:39:43,882 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:39:43,882 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:39:43,882 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:39:43,882 - utils.logger - INFO - Running module: Nmap Scan (T1595.002)
+2025-06-29 02:39:43,883 - utils.logger - INFO - Performing Nmap scan for target: 127.0.0.1 with arguments: -sV -O
+2025-06-29 02:39:45,834 - utils.logger - ERROR - Error during Nmap scan for 127.0.0.1: 'PortScannerHostDict' object has no attribute 'all_addresses'
+2025-06-29 02:39:45,834 - utils.logger - ERROR - Module nmap completed with errors: 'PortScannerHostDict' object has no attribute 'all_addresses'
+2025-06-29 02:39:45,834 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:39:45,835 - utils.logger - INFO - Overall JSON report saved to reports/127.0.0.1_overall_recon_report_20250629_023945.json
+2025-06-29 02:39:45,835 - utils.logger - INFO - Reconnaissance complete.
+2025-06-29 02:43:03,479 - utils.logger - INFO - Starting reconnaissance for target: example.com
+2025-06-29 02:43:03,479 - utils.logger - INFO - Modules selected: nmap
+2025-06-29 02:43:03,479 - utils.logger - INFO - Report format: json
+2025-06-29 02:43:03,479 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-06-29 02:43:03,479 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-06-29 02:43:03,479 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-06-29 02:43:03,498 - utils.logger - INFO - Initialized Nmap Scan module (T1595.002)
+2025-06-29 02:43:03,498 - utils.logger - INFO - Initialized GitHub Dorking module (T1592.002)
+2025-06-29 02:43:03,498 - utils.logger - WARNING - Shodan API key not configured in config.py. Shodan queries will not work.
+2025-06-29 02:43:03,498 - utils.logger - INFO - Running module: Nmap Scan (T1595.002)
+2025-06-29 02:43:03,498 - utils.logger - INFO - Performing Nmap scan for target: example.com with arguments: -sV -O
+2025-06-29 02:44:25,342 - utils.logger - INFO - Nmap scan successful for example.com
+2025-06-29 02:44:25,342 - utils.logger - INFO - Module nmap completed successfully.
+2025-06-29 02:44:25,342 - utils.logger - INFO - Generating overall report...
+2025-06-29 02:44:25,343 - utils.logger - INFO - Overall JSON report saved to reports/example.com_overall_recon_report_20250629_024425.json
+2025-06-29 02:44:25,345 - utils.logger - INFO - Reconnaissance complete.
