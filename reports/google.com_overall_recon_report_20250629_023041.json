@@ -1,0 +1,33 @@
+{
+    "whois": {
+        "target": "google.com",
+        "technique_id": "T1591.002",
+        "technique_name": "WHOIS Lookup",
+        "data": {
+            "domain_name": "GOOGLE.COM",
+            "registrar": "MarkMonitor, Inc.",
+            "whois_server": "whois.markmonitor.com",
+            "referral_url": null,
+            "updated_date": "[datetime.datetime(2019, 9, 9, 15, 39, 4), datetime.datetime(2024, 8, 2, 2, 17, 33, tzinfo=datetime.timezone.utc)]",
+            "creation_date": "[datetime.datetime(1997, 9, 15, 4, 0), datetime.datetime(1997, 9, 15, 7, 0, tzinfo=datetime.timezone.utc)]",
+            "expiration_date": "[datetime.datetime(2028, 9, 14, 4, 0), datetime.datetime(2028, 9, 13, 7, 0, tzinfo=datetime.timezone.utc)]",
+            "name_servers": [
+                "NS1.GOOGLE.COM",
+                "NS2.GOOGLE.COM",
+                "NS3.GOOGLE.COM",
+                "NS4.GOOGLE.COM"
+            ],
+            "emails": [
+                "abusecomplaints@markmonitor.com",
+                "whoisrequest@markmonitor.com"
+            ],
+            "org": "Google LLC",
+            "address": null,
+            "city": null,
+            "state": null,
+            "zipcode": null,
+            "country": "US"
+        },
+        "error": null
+    }
+}

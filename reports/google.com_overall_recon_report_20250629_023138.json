@@ -1,0 +1,31 @@
+{
+    "dns": {
+        "target": "google.com",
+        "technique_id": "T1590.002",
+        "technique_name": "DNS Information",
+        "data": {
+            "A": [
+                "142.251.43.110"
+            ],
+            "AAAA": [
+                "2404:6800:4002:802::200e"
+            ],
+            "MX": [
+                "10 smtp.google.com."
+            ],
+            "NS": [
+                "ns2.google.com.",
+                "ns4.google.com.",
+                "ns3.google.com.",
+                "ns1.google.com."
+            ],
+            "TXT": "No records found.",
+            "SOA": [
+                "ns1.google.com. dns-admin.google.com. 776904125 900 900 1800 60"
+            ],
+            "SRV": "No records found.",
+            "CNAME": "No records found."
+        },
+        "error": null
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "subdomain": {
+        "target": "google.com",
+        "technique_id": "T1590.002",
+        "technique_name": "Subdomain Enumeration",
+        "data": [],
+        "error": "subfinder not found. Please install it and ensure it's in your PATH."
+    }
+}

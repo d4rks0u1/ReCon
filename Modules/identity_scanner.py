@@ -1,37 +1,64 @@
-import re
-import requests
-from bs4 import BeautifulSoup
-import subprocess 
+from utils.logger import logger
 
+class IdentityScanner:
+    def __init__(self):
+        self.technique_id = "T1589"
+        self.technique_name = "Gather Victim Identity Information"
+        
+    def run(self, target):
+        """Main method to run the identity scanning module"""
+        results = {
+            "emails": [],
+            "usernames": [],
+            "names": [],
+            "errors": []
+        }
+        
+        try:
+            logger.info(f"Starting identity scan for {target}")
+            results.update(self.scan_web_content(target))
+            results.update(self.check_whois(target))
+            logger.info("Identity scan completed successfully")
+        except Exception as e:
+            logger.error(f"Identity scan failed: {str(e)}")
+            results["errors"].append(str(e))
+            
+        return results
 
-def extract_identity_info():
-    url = input("Enter URL to scrape: ")
-    print(f"[+] Crawling {url} for identity info...")
+    def scan_web_content(self, url):
+        """Scan web content for personal identifiers"""
+        import re
+        import requests
+        
+        results = {}
+        try:
+            response = requests.get(url, timeout=10)
+            content = response.text
 
-    try:
-        response = requests.get(url, timeout=10)
-        content = response.text
+            results["emails"] = list(set(re.findall(
+                r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", content)))
+                
+            results["usernames"] = list(set(re.findall(
+                r"user(?:name)?[\"':\s=]{1,5}([a-zA-Z0-9_]+)", content)))
+                
+            results["names"] = list(set(re.findall(
+                r"\b[A-Z][a-z]+\s[A-Z][a-z]+\b", content)))
 
-        emails = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", content)
-        usernames = re.findall(r"user(?:name)?[\"':\s=]{1,5}([a-zA-Z0-9_]+)", content)
-        names = re.findall(r"\b[A-Z][a-z]+\s[A-Z][a-z]+\b", content)
+        except Exception as e:
+            logger.error(f"Web content scan failed: {str(e)}")
+            
+        return results
 
-        print("[+] Potential Emails Found:")
-        for email in set(emails):
-            print("  -", email)
-
-        print("\n[+] Potential Usernames:")
-        for user in set(usernames):
-            print("  -", user)
-
-        print("\n[+] Potential Full Names:")
-        for name in set(names):
-            print("  -", name)
-
-    except Exception as e:
-        print(f"[-] Error occurred: {e}")
-
-def scan_host():
-    host = input("Enter IP/Domain: ")
-    print(f"[+] Gathering host information for {host}")
-    subprocess.run(["whois", host])
+    def check_whois(self, domain):
+        """Perform WHOIS lookup for domain registration info"""
+        import subprocess
+        
+        try:
+            result = subprocess.run(["whois", domain], 
+                                  capture_output=True, 
+                                  text=True,
+                                  timeout=15)
+            return {"whois_info": result.stdout}
+        except Exception as e:
+            logger.error(f"WHOIS lookup failed: {str(e)}")
+            return {"whois_info": "", "errors": [str(e)]}

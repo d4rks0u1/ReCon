@@ -1,0 +1,9 @@
+{
+    "nmap": {
+        "target": "127.0.0.1",
+        "technique_id": "T1595.002",
+        "technique_name": "Nmap Scan",
+        "data": {},
+        "error": "'PortScannerHostDict' object has no attribute 'all_addresses'"
+    }
+}

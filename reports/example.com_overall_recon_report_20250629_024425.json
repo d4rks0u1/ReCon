@@ -1,0 +1,94 @@
+{
+    "nmap": {
+        "target": "example.com",
+        "technique_id": "T1595.002",
+        "technique_name": "Nmap Scan",
+        "data": {
+            "23.215.0.136": {
+                "status": "up",
+                "addresses": {
+                    "ipv4": "23.215.0.136"
+                },
+                "hostnames": [
+                    {
+                        "name": "example.com",
+                        "type": "user"
+                    },
+                    {
+                        "name": "a23-215-0-136.deploy.static.akamaitechnologies.com",
+                        "type": "PTR"
+                    }
+                ],
+                "os_match": [
+                    {
+                        "name": "Actiontec MI424WR-GEN3I WAP",
+                        "accuracy": "100",
+                        "line": "1307",
+                        "osclass": [
+                            {
+                                "type": "WAP",
+                                "vendor": "Actiontec",
+                                "osfamily": "embedded",
+                                "osgen": null,
+                                "accuracy": "100",
+                                "cpe": [
+                                    "cpe:/h:actiontec:mi424wr-gen3i"
+                                ]
+                            },
+                            {
+                                "type": "WAP",
+                                "vendor": "Linux",
+                                "osfamily": "Linux",
+                                "osgen": null,
+                                "accuracy": "100",
+                                "cpe": [
+                                    "cpe:/o:linux:linux_kernel"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "DD-WRT v24-sp2 (Linux 2.4.37)",
+                        "accuracy": "100",
+                        "line": "48392",
+                        "osclass": [
+                            {
+                                "type": "general purpose",
+                                "vendor": "Linux",
+                                "osfamily": "Linux",
+                                "osgen": "2.4.X",
+                                "accuracy": "100",
+                                "cpe": [
+                                    "cpe:/o:linux:linux_kernel:2.4.37"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "ports": {
+                    "80/tcp": {
+                        "state": "open",
+                        "reason": "syn-ack",
+                        "name": "http",
+                        "product": "AkamaiGHost",
+                        "version": "",
+                        "extrainfo": "Akamai's HTTP Acceleration/Mirror service",
+                        "conf": "10",
+                        "cpe": ""
+                    },
+                    "443/tcp": {
+                        "state": "open",
+                        "reason": "syn-ack",
+                        "name": "http",
+                        "product": "AkamaiGHost",
+                        "version": "",
+                        "extrainfo": "Akamai's HTTP Acceleration/Mirror service",
+                        "conf": "10",
+                        "cpe": ""
+                    }
+                }
+            }
+        },
+        "error": null
+    }
+}

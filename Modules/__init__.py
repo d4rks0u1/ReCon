@@ -4,3 +4,7 @@ from .dns_info import DNSInformation
 from .nmap_scanner import NmapScanner
 from .github_dorking import GitHubDorking
 from .shodan_query import ShodanQuery
+from .identity_scanner import IdentityScanner
+from .techint_scanner import TechIntScanner
+from .wordlist_scanner import WordlistScanner
+from .network_mapper import NetworkMapper
