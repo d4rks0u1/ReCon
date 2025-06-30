@@ -121,3 +121,15 @@
 2025-06-29 02:44:25,342 - utils.logger - INFO - Generating overall report...
 2025-06-29 02:44:25,343 - utils.logger - INFO - Overall JSON report saved to reports/example.com_overall_recon_report_20250629_024425.json
 2025-06-29 02:44:25,345 - utils.logger - INFO - Reconnaissance complete.
+2025-07-01 00:40:08,712 - utils.logger - INFO - Starting reconnaissance for target: example.com
+2025-07-01 00:40:08,713 - utils.logger - INFO - Modules selected: wordlist
+2025-07-01 00:40:08,713 - utils.logger - INFO - Report format: json
+2025-07-01 00:40:08,713 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-07-01 00:40:08,714 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-07-01 00:40:08,714 - utils.logger - INFO - Initialized DNS Information module (T1590.002)
+2025-07-01 00:40:13,575 - utils.logger - INFO - Starting reconnaissance for target: example.com
+2025-07-01 00:40:13,576 - utils.logger - INFO - Modules selected: wordlist
+2025-07-01 00:40:13,576 - utils.logger - INFO - Report format: json
+2025-07-01 00:40:13,576 - utils.logger - INFO - Initialized WHOIS Lookup module (T1591.002)
+2025-07-01 00:40:13,576 - utils.logger - INFO - Initialized Subdomain Enumeration module (T1590.002)
+2025-07-01 00:40:13,576 - utils.logger - INFO - Initialized DNS Information module (T1590.002)

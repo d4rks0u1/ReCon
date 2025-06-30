@@ -11,7 +11,11 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
 
 from utils.logger import logger
 from utils.reporter import save_report, generate_overall_report
-from Modules import WhoisLookup, SubdomainEnumeration, DNSInformation, NmapScanner, GitHubDorking, ShodanQuery
+from Modules import (
+    WhoisLookup, SubdomainEnumeration, DNSInformation, 
+    NmapScanner, GitHubDorking, ShodanQuery,
+    IdentityScanner, TechIntScanner, WordlistScanner, NetworkMapper
+)
 
 init(autoreset=True) # Initialize Colorama
 
@@ -42,6 +46,10 @@ def show_help_menu():
     print("  nmap        - Performs Nmap scans (requires Nmap to be installed).")
     print("  github      - Conducts GitHub dorking to find sensitive information.")
     print("  shodan      - Queries Shodan for target information (requires Shodan API key).")
+    print("  identity    - Scans for exposed personal information and credentials.")
+    print("  techint     - Performs technical intelligence gathering on technologies used.")
+    print("  wordlist    - Generates targeted wordlists based on reconnaissance data.")
+    print("  network     - Maps network infrastructure and analyzes traffic patterns.")
 
     print("\n" + Fore.CYAN + "Examples:" + Style.RESET_ALL)
     print("  " + Fore.WHITE + "python main.py example.com" + Style.RESET_ALL)
@@ -86,11 +94,6 @@ def main():
     report_format = args.format
     save_individual_reports = args.save_individual
 
-    target = args.target
-    modules_to_run = args.modules
-    report_format = args.format
-    save_individual_reports = args.save_individual
-
     logger.info(f"Starting reconnaissance for target: {target}")
     logger.info(f"Modules selected: {', '.join(modules_to_run)}")
     logger.info(f"Report format: {report_format}")
@@ -101,7 +104,11 @@ def main():
         "dns": DNSInformation(),
         "nmap": NmapScanner(),
         "github": GitHubDorking(),
-        "shodan": ShodanQuery()
+        "shodan": ShodanQuery(),
+        "identity": IdentityScanner(),
+        "techint": TechIntScanner(),
+        "wordlist": WordlistScanner(),
+        "network": NetworkMapper()
     }
 
     all_results = {}
